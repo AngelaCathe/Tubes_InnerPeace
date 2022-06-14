@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package OOP_InnerPeace;
+package revisi_mentalhealth_care;
 
 import java.awt.Color;
 
@@ -10,12 +10,12 @@ import java.awt.Color;
  *
  * @author Aspire 5
  */
-public class MenuConsultant extends javax.swing.JFrame {
+public class MenuUser extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuUser
      */
-    public MenuConsultant() {
+    public MenuUser() {
         initComponents();
     }
 
@@ -78,7 +78,7 @@ public class MenuConsultant extends javax.swing.JFrame {
         ButtonOnlenConsult.setBackground(java.awt.Color.pink);
         ButtonOnlenConsult.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         ButtonOnlenConsult.setForeground(new java.awt.Color(0, 102, 153));
-        ButtonOnlenConsult.setText("Consultee Records");
+        ButtonOnlenConsult.setText("Make an Appointment");
         ButtonOnlenConsult.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtonOnlenConsult.setBorderPainted(false);
         ButtonOnlenConsult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -100,7 +100,7 @@ public class MenuConsultant extends javax.swing.JFrame {
         ButtonDiary.setBackground(java.awt.Color.pink);
         ButtonDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         ButtonDiary.setForeground(new java.awt.Color(0, 102, 153));
-        ButtonDiary.setText("Appointment");
+        ButtonDiary.setText("My Personal Diary");
         ButtonDiary.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtonDiary.setBorderPainted(false);
         ButtonDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,8 +118,6 @@ public class MenuConsultant extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ButtonDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 340, 60));
-
-        LogoInnerPeace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/OOP_InnerPeace/logo_innerpeace1.png"))); // NOI18N
         getContentPane().add(LogoInnerPeace, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 260, 450));
 
         jPanel1.setBackground(new java.awt.Color(77, 150, 255));
@@ -181,23 +179,21 @@ public class MenuConsultant extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuConsultant.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuConsultant.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuConsultant.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuConsultant.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuConsultant().setVisible(true);
+                new MenuUser().setVisible(true);
             }
         });
     }
