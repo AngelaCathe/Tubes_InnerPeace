@@ -38,7 +38,6 @@ public class DiaryUser extends javax.swing.JFrame {
         ButtonBack = new javax.swing.JButton();
         jBackground = new javax.swing.JPanel();
         LabelGreetingDiary = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("InnerPeace");
@@ -240,7 +239,6 @@ public class DiaryUser extends javax.swing.JFrame {
         LabelGreetingDiary.setForeground(new java.awt.Color(0, 102, 153));
         LabelGreetingDiary.setText("My Personal Diary");
         jBackground.add(LabelGreetingDiary);
-        jBackground.add(jDateChooser1);
 
         getContentPane().add(jBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
 
@@ -318,7 +316,6 @@ public class DiaryUser extends javax.swing.JFrame {
     private javax.swing.ButtonGroup RadioButtonDiaryPrivacy;
     private javax.swing.JTable TabelDiary;
     private javax.swing.JPanel jBackground;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

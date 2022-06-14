@@ -229,8 +229,6 @@
             <Property name="text" type="java.lang.String" value="My Personal Diary"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
