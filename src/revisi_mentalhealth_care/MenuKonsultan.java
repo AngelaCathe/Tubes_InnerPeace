@@ -5,19 +5,16 @@
 package revisi_mentalhealth_care;
 
 import java.awt.Color;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
-import revisi_mentalhealth_care.Login;
 /**
  *
  * @author Aspire 5
  */
-public class MenuUser extends javax.swing.JFrame {
+public class MenuKonsultan extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuUser
      */
-    public MenuUser() {
+    public MenuKonsultan() {
         initComponents();
     }
 
@@ -30,15 +27,14 @@ public class MenuUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LogoInnerPeace = new javax.swing.JLabel();
         ButtonLogOut = new javax.swing.JButton();
-        ButtonAppointment = new javax.swing.JButton();
-        ButtonDiary = new javax.swing.JButton();
+        LogoInnerPeace = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        ButtonRekamMedis = new javax.swing.JButton();
+        ButtonAppointment = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         LabelGreetingUser = new javax.swing.JLabel();
-        LabelGreetingUser2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("InnerPeace");
@@ -46,9 +42,6 @@ public class MenuUser extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(709, 483));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        LogoInnerPeace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
-        getContentPane().add(LogoInnerPeace, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 260, 440));
 
         ButtonLogOut.setBackground(java.awt.Color.pink);
         ButtonLogOut.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
@@ -70,12 +63,40 @@ public class MenuUser extends javax.swing.JFrame {
                 ButtonLogOutActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, 150, 40));
+        getContentPane().add(ButtonLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 410, 150, 40));
+
+        LogoInnerPeace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
+        getContentPane().add(LogoInnerPeace, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 260, 440));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel3.setBackground(new java.awt.Color(150, 204, 255));
+
+        ButtonRekamMedis.setBackground(java.awt.Color.pink);
+        ButtonRekamMedis.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        ButtonRekamMedis.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonRekamMedis.setText("Consultee Records");
+        ButtonRekamMedis.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ButtonRekamMedis.setBorderPainted(false);
+        ButtonRekamMedis.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonRekamMedis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ButtonRekamMedisMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ButtonRekamMedisMouseExited(evt);
+            }
+        });
+        ButtonRekamMedis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonRekamMedisActionPerformed(evt);
+            }
+        });
 
         ButtonAppointment.setBackground(java.awt.Color.pink);
         ButtonAppointment.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         ButtonAppointment.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonAppointment.setText("Make an Appointment");
+        ButtonAppointment.setText("Appointment");
         ButtonAppointment.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         ButtonAppointment.setBorderPainted(false);
         ButtonAppointment.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -92,33 +113,27 @@ public class MenuUser extends javax.swing.JFrame {
                 ButtonAppointmentActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 340, 60));
 
-        ButtonDiary.setBackground(java.awt.Color.pink);
-        ButtonDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        ButtonDiary.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonDiary.setText("My Personal Diary");
-        ButtonDiary.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ButtonDiary.setBorderPainted(false);
-        ButtonDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ButtonDiary.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ButtonDiaryMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ButtonDiaryMouseExited(evt);
-            }
-        });
-        ButtonDiary.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonDiaryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ButtonDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 340, 60));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel3.setBackground(new java.awt.Color(150, 204, 255));
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ButtonRekamMedis, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
+                    .addComponent(ButtonAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(315, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(ButtonAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(ButtonRekamMedis, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -126,14 +141,14 @@ public class MenuUser extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -142,24 +157,19 @@ public class MenuUser extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(77, 150, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelGreetingUser.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LabelGreetingUser.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         LabelGreetingUser.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingUser.setText("Hello there :)");
-        jPanel1.add(LabelGreetingUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 70));
-
-        LabelGreetingUser2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 28)); // NOI18N
-        LabelGreetingUser2.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingUser2.setText("How can we help?");
-        jPanel1.add(LabelGreetingUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 400, 70));
+        LabelGreetingUser.setText("InnerPeace");
+        jPanel1.add(LabelGreetingUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 400, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonDiaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDiaryActionPerformed
+    private void ButtonRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRekamMedisActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonDiaryActionPerformed
+    }//GEN-LAST:event_ButtonRekamMedisActionPerformed
 
     private void ButtonLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLogOutActionPerformed
         // TODO add your handling code here:
@@ -169,13 +179,13 @@ public class MenuUser extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonAppointmentActionPerformed
 
-    private void ButtonDiaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonDiaryMouseEntered
-        ButtonDiary.setBackground(Color.lightGray);
-    }//GEN-LAST:event_ButtonDiaryMouseEntered
+    private void ButtonRekamMedisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRekamMedisMouseEntered
+        ButtonRekamMedis.setBackground(Color.lightGray);
+    }//GEN-LAST:event_ButtonRekamMedisMouseEntered
 
-    private void ButtonDiaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonDiaryMouseExited
-        ButtonDiary.setBackground(Color.pink);
-    }//GEN-LAST:event_ButtonDiaryMouseExited
+    private void ButtonRekamMedisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRekamMedisMouseExited
+        ButtonRekamMedis.setBackground(Color.pink);
+    }//GEN-LAST:event_ButtonRekamMedisMouseExited
 
     private void ButtonAppointmentMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAppointmentMouseEntered
         ButtonAppointment.setBackground(Color.lightGray);
@@ -210,31 +220,32 @@ public class MenuUser extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuKonsultan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuKonsultan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuKonsultan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuKonsultan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuUser().setVisible(true);
+                new MenuKonsultan().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonAppointment;
-    private javax.swing.JButton ButtonDiary;
     private javax.swing.JButton ButtonLogOut;
+    private javax.swing.JButton ButtonRekamMedis;
     private javax.swing.JLabel LabelGreetingUser;
-    private javax.swing.JLabel LabelGreetingUser2;
     private javax.swing.JLabel LogoInnerPeace;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

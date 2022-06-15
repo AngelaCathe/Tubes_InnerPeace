@@ -25,7 +25,9 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
-
+    public String getnama() {
+        return this.nama.getText();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -199,7 +201,7 @@ public class Login extends javax.swing.JFrame {
                 java.sql.ResultSet rs = pst.executeQuery();
                 if(rs.next()){
                     JOptionPane.showMessageDialog(null,"Login Berhasil");
-                    new TampilanUser().show();
+                    new MenuUser().show();
                     this.dispose();
 
                 }

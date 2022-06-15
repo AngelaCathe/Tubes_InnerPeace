@@ -34,10 +34,10 @@ public class DiaryUser extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         TabelDiary = new javax.swing.JTable();
         ButtonFinishDiary = new javax.swing.JButton();
-        LabelGreetingDiary2 = new javax.swing.JLabel();
         ButtonBack = new javax.swing.JButton();
-        jBackground = new javax.swing.JPanel();
         LabelGreetingDiary = new javax.swing.JLabel();
+        LabelGreetingDiary2 = new javax.swing.JLabel();
+        jBackground = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("InnerPeace");
@@ -205,12 +205,6 @@ public class DiaryUser extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonFinishDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, -1));
 
-        LabelGreetingDiary2.setBackground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
-        LabelGreetingDiary2.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setText("A Sanctuary, vent to your heart's content.");
-        getContentPane().add(LabelGreetingDiary2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 420, 30));
-
         ButtonBack.setBackground(java.awt.Color.pink);
         ButtonBack.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         ButtonBack.setForeground(new java.awt.Color(0, 102, 153));
@@ -233,12 +227,29 @@ public class DiaryUser extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 160, 40));
 
-        jBackground.setBackground(new java.awt.Color(77, 150, 255));
-
         LabelGreetingDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
         LabelGreetingDiary.setForeground(new java.awt.Color(0, 102, 153));
         LabelGreetingDiary.setText("My Personal Diary");
-        jBackground.add(LabelGreetingDiary);
+        getContentPane().add(LabelGreetingDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        LabelGreetingDiary2.setBackground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        LabelGreetingDiary2.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary2.setText("A Sanctuary, vent to your heart's content.");
+        getContentPane().add(LabelGreetingDiary2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 420, 30));
+
+        jBackground.setBackground(new java.awt.Color(77, 150, 255));
+
+        javax.swing.GroupLayout jBackgroundLayout = new javax.swing.GroupLayout(jBackground);
+        jBackground.setLayout(jBackgroundLayout);
+        jBackgroundLayout.setHorizontalGroup(
+            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 710, Short.MAX_VALUE)
+        );
+        jBackgroundLayout.setVerticalGroup(
+            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
+        );
 
         getContentPane().add(jBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
 
