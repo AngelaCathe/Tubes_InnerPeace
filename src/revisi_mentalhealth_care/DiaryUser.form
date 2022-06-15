@@ -59,9 +59,9 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <Component id="a" min="-2" pref="288" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="c" max="32767" attributes="0"/>
                                       </Group>
                                       <Component id="jScrollPane2" alignment="0" min="-2" pref="443" max="-2" attributes="0"/>
@@ -99,9 +99,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" pref="44" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="a" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="c" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="c" max="32767" attributes="0"/>
+                              <Component id="a" pref="33" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="147" max="-2" attributes="0"/>
@@ -239,8 +239,6 @@
             <Property name="text" type="java.lang.String" value="My Personal Diary"/>
           </Properties>
         </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="c">
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -251,6 +249,8 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Diary Content"/>
           </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="c">
         </Component>
       </SubComponents>
     </Container>
