@@ -35,7 +35,7 @@ public class Register extends javax.swing.JFrame {
     private void initComponents() {
 
         Background1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         Background2 = new javax.swing.JPanel();
         Nama = new javax.swing.JTextField();
         ButtonRegis = new javax.swing.JButton();
@@ -51,7 +51,7 @@ public class Register extends javax.swing.JFrame {
 
         Background1.setBackground(new java.awt.Color(77, 150, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
 
         javax.swing.GroupLayout Background1Layout = new javax.swing.GroupLayout(Background1);
         Background1.setLayout(Background1Layout);
@@ -59,14 +59,14 @@ public class Register extends javax.swing.JFrame {
             Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background1Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addComponent(jLabel1)
+                .addComponent(logo)
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         Background1Layout.setVerticalGroup(
             Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Background1Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addComponent(jLabel1)
+                .addComponent(logo)
                 .addContainerGap(172, Short.MAX_VALUE))
         );
 
@@ -268,9 +268,9 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JTextField Nama;
     private javax.swing.JPasswordField Password;
     private javax.swing.JPasswordField VerPass;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }
