@@ -34,7 +34,7 @@ public class DiaryUser extends javax.swing.JFrame {
             while (rs.next()){
                 model.addRow(new Object[]{no++,rs.getString(1),rs.getString(2), rs.getString(3)});
                 
-                table.setModel(model);
+                tabelDiary.setModel(model);
             }
         
         }catch(SQLException e){
@@ -59,24 +59,24 @@ public class DiaryUser extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        Background = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-        a = new javax.swing.JTextField();
+        tabelDiary = new javax.swing.JTable();
+        InputTitle = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        b = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        c = new com.toedter.calendar.JDateChooser();
+        IsiDiary = new javax.swing.JTextArea();
+        ButtonDone = new javax.swing.JButton();
+        ButtonBack = new javax.swing.JButton();
+        JudulDiary2 = new javax.swing.JLabel();
+        JudulDiary1 = new javax.swing.JLabel();
+        LabelDiaryContent = new javax.swing.JLabel();
+        Date = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(77, 150, 255));
+        Background.setBackground(new java.awt.Color(77, 150, 255));
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        tabelDiary.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -84,119 +84,119 @@ public class DiaryUser extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3"
+                "Date", "Title", "Diary"
             }
         ));
-        table.addMouseListener(new java.awt.event.MouseAdapter() {
+        tabelDiary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tableMouseClicked(evt);
+                tabelDiaryMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(table);
+        jScrollPane1.setViewportView(tabelDiary);
 
-        a.setText("Title");
-        a.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        a.addMouseListener(new java.awt.event.MouseAdapter() {
+        InputTitle.setText("Title");
+        InputTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        InputTitle.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aMouseClicked(evt);
+                InputTitleMouseClicked(evt);
             }
         });
-        a.addActionListener(new java.awt.event.ActionListener() {
+        InputTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aActionPerformed(evt);
+                InputTitleActionPerformed(evt);
             }
         });
 
-        b.setColumns(20);
-        b.setRows(5);
-        b.setText("Text");
-        b.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        b.addMouseListener(new java.awt.event.MouseAdapter() {
+        IsiDiary.setColumns(20);
+        IsiDiary.setRows(5);
+        IsiDiary.setText("Text");
+        IsiDiary.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IsiDiary.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bMouseClicked(evt);
+                IsiDiaryMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(b);
+        jScrollPane2.setViewportView(IsiDiary);
 
-        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jButton1.setText("DONE");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonDone.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ButtonDone.setText("DONE");
+        ButtonDone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonDoneActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jButton2.setText("Back To Main Menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBack.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ButtonBack.setText("Back To Main Menu");
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonBackActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("A Sanctuary, vent to your heart's content.");
+        JudulDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        JudulDiary2.setForeground(new java.awt.Color(255, 255, 255));
+        JudulDiary2.setText("A Sanctuary, vent to your heart's content.");
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        jLabel2.setText("My Personal Diary");
+        JudulDiary1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        JudulDiary1.setText("My Personal Diary");
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Diary Content");
+        LabelDiaryContent.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        LabelDiaryContent.setForeground(new java.awt.Color(255, 255, 255));
+        LabelDiaryContent.setText("Diary Content");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(BackgroundLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(LabelDiaryContent))
+                            .addGroup(BackgroundLayout.createSequentialGroup()
+                                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, BackgroundLayout.createSequentialGroup()
+                                        .addComponent(InputTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(c, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(ButtonDone, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                                .addComponent(jButton2))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(ButtonBack))))
+                    .addGroup(BackgroundLayout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))))
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JudulDiary1)
+                            .addComponent(JudulDiary2))))
                 .addGap(42, 42, 42))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BackgroundLayout.createSequentialGroup()
+                        .addComponent(JudulDiary1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(2, 2, 2)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JudulDiary2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelDiaryContent, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(c, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(a, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                        .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(InputTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)))
+                        .addComponent(ButtonDone)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -204,26 +204,26 @@ public class DiaryUser extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
+    private void InputTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputTitleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_aActionPerformed
+    }//GEN-LAST:event_InputTitleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String title = a.getText();
-        String diary = b.getText();
+    private void ButtonDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDoneActionPerformed
+        String title = InputTitle.getText();
+        String diary = IsiDiary.getText();
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
-        String date = String.valueOf(fm.format(c.getDate()));
+        String date = String.valueOf(fm.format(Date.getDate()));
         try{
                 String sql = "insert into catatan VALUES ('" + date +"','"+ title +"','"+ diary +"')";
                 java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
@@ -235,32 +235,32 @@ public class DiaryUser extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,ex);
             }
         tampilkan_data();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonDoneActionPerformed
 
-    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
-        int baris = table.rowAtPoint(evt.getPoint());
+    private void tabelDiaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelDiaryMouseClicked
+        int baris = tabelDiary.rowAtPoint(evt.getPoint());
         
-        String ttl = table.getValueAt(baris, 2).toString();
-        a.setText(ttl);
-        a.setForeground(Color.black);
+        String ttl = tabelDiary.getValueAt(baris, 2).toString();
+        InputTitle.setText(ttl);
+        InputTitle.setForeground(Color.black);
         
-        String dry = table.getValueAt(baris, 3).toString();
-        b.setText(dry);
-        b.setForeground(Color.black);
-    }//GEN-LAST:event_tableMouseClicked
+        String dry = tabelDiary.getValueAt(baris, 3).toString();
+        IsiDiary.setText(dry);
+        IsiDiary.setForeground(Color.black);
+    }//GEN-LAST:event_tabelDiaryMouseClicked
 
-    private void aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aMouseClicked
-        a.setText("");
-    }//GEN-LAST:event_aMouseClicked
+    private void InputTitleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputTitleMouseClicked
+        InputTitle.setText("");
+    }//GEN-LAST:event_InputTitleMouseClicked
 
-    private void bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMouseClicked
-        b.setText("");
-    }//GEN-LAST:event_bMouseClicked
+    private void IsiDiaryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IsiDiaryMouseClicked
+        IsiDiary.setText("");
+    }//GEN-LAST:event_IsiDiaryMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
         new TampilanUser().show();
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,18 +299,18 @@ public class DiaryUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField a;
-    private javax.swing.JTextArea b;
+    private javax.swing.JPanel Background;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonDone;
+    private com.toedter.calendar.JDateChooser Date;
+    private javax.swing.JTextField InputTitle;
+    private javax.swing.JTextArea IsiDiary;
+    private javax.swing.JLabel JudulDiary1;
+    private javax.swing.JLabel JudulDiary2;
+    private javax.swing.JLabel LabelDiaryContent;
     private javax.swing.ButtonGroup buttonGroup1;
-    private com.toedter.calendar.JDateChooser c;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable table;
+    private javax.swing.JTable tabelDiary;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,153 +34,153 @@ public class Register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        Background1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        a = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        Background2 = new javax.swing.JPanel();
+        Nama = new javax.swing.JTextField();
+        ButtonRegis = new javax.swing.JButton();
+        LabelRegister = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        b = new javax.swing.JPasswordField();
-        c = new javax.swing.JPasswordField();
+        Password = new javax.swing.JPasswordField();
+        VerPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(77, 150, 255));
+        Background1.setBackground(new java.awt.Color(77, 150, 255));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background1Layout = new javax.swing.GroupLayout(Background1);
+        Background1.setLayout(Background1Layout);
+        Background1Layout.setHorizontalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background1Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jLabel1)
                 .addContainerGap(64, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        Background1Layout.setVerticalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background1Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addComponent(jLabel1)
                 .addContainerGap(172, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 340, 520));
+        getContentPane().add(Background1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 340, 520));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        Background2.setBackground(new java.awt.Color(255, 255, 255));
 
-        a.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        a.setForeground(new java.awt.Color(204, 204, 204));
-        a.setText("Username");
-        a.setBorder(null);
-        a.addMouseListener(new java.awt.event.MouseAdapter() {
+        Nama.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Nama.setForeground(new java.awt.Color(204, 204, 204));
+        Nama.setText("Username");
+        Nama.setBorder(null);
+        Nama.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aMouseClicked(evt);
+                NamaMouseClicked(evt);
             }
         });
-        a.addActionListener(new java.awt.event.ActionListener() {
+        Nama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aActionPerformed(evt);
+                NamaActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(77, 150, 255));
-        jButton1.setText("Register");
-        jButton1.setBorder(null);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        ButtonRegis.setBackground(new java.awt.Color(255, 255, 255));
+        ButtonRegis.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        ButtonRegis.setForeground(new java.awt.Color(77, 150, 255));
+        ButtonRegis.setText("Register");
+        ButtonRegis.setBorder(null);
+        ButtonRegis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                ButtonRegisMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                ButtonRegisMouseExited(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonRegis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonRegisActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
-        jLabel2.setText("Register");
+        LabelRegister.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
+        LabelRegister.setText("Register");
 
-        b.setText("jPasswordField1");
-        b.addMouseListener(new java.awt.event.MouseAdapter() {
+        Password.setText("jPasswordField1");
+        Password.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bMouseClicked(evt);
+                PasswordMouseClicked(evt);
             }
         });
 
-        c.setText("jPasswordField1");
-        c.addMouseListener(new java.awt.event.MouseAdapter() {
+        VerPass.setText("jPasswordField1");
+        VerPass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cMouseClicked(evt);
+                VerPassMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background2Layout = new javax.swing.GroupLayout(Background2);
+        Background2.setLayout(Background2Layout);
+        Background2Layout.setHorizontalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background2Layout.createSequentialGroup()
+                .addGroup(Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Background2Layout.createSequentialGroup()
                         .addGap(110, 110, 110)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(ButtonRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Background2Layout.createSequentialGroup()
                         .addGap(80, 80, 80)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(a)
+                        .addGroup(Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelRegister)
+                            .addComponent(Nama)
                             .addComponent(jSeparator1)
                             .addComponent(jSeparator2)
                             .addComponent(jSeparator3)
-                            .addComponent(b, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(c))))
+                            .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(VerPass))))
                 .addContainerGap(90, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        Background2Layout.setVerticalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background2Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
-                .addComponent(jLabel2)
+                .addComponent(LabelRegister)
                 .addGap(63, 63, 63)
-                .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Nama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
-                .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(VerPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonRegis, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 370, 490));
+        getContentPane().add(Background2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 370, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
+    private void NamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_aActionPerformed
+    }//GEN-LAST:event_NamaActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String username = a.getText();
-        String password = b.getText();
-        String verpassword = c.getText();
+    private void ButtonRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRegisActionPerformed
+        String username = Nama.getText();
+        String password = Password.getText();
+        String verpassword = VerPass.getText();
         
         if(password.equals(verpassword)){
             try{
@@ -200,30 +200,30 @@ public class Register extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null,"Data Tidak Tersimpan");
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonRegisActionPerformed
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setForeground(Color.WHITE);
-        jButton1.setBackground(new Color(77,150,255));
-    }//GEN-LAST:event_jButton1MouseEntered
+    private void ButtonRegisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRegisMouseEntered
+        ButtonRegis.setForeground(Color.WHITE);
+        ButtonRegis.setBackground(new Color(77,150,255));
+    }//GEN-LAST:event_ButtonRegisMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setForeground(new Color(77,150,255));
-        jButton1.setBackground(Color.WHITE);
-    }//GEN-LAST:event_jButton1MouseExited
+    private void ButtonRegisMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRegisMouseExited
+        ButtonRegis.setForeground(new Color(77,150,255));
+        ButtonRegis.setBackground(Color.WHITE);
+    }//GEN-LAST:event_ButtonRegisMouseExited
 
-    private void aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aMouseClicked
-        a.setText("");
-        a.setForeground(Color.black);
-    }//GEN-LAST:event_aMouseClicked
+    private void NamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NamaMouseClicked
+        Nama.setText("");
+        Nama.setForeground(Color.black);
+    }//GEN-LAST:event_NamaMouseClicked
 
-    private void bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMouseClicked
-        b.setText("");
-    }//GEN-LAST:event_bMouseClicked
+    private void PasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordMouseClicked
+        Password.setText("");
+    }//GEN-LAST:event_PasswordMouseClicked
 
-    private void cMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cMouseClicked
-        c.setText("");
-    }//GEN-LAST:event_cMouseClicked
+    private void VerPassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerPassMouseClicked
+        VerPass.setText("");
+    }//GEN-LAST:event_VerPassMouseClicked
 
     /**
      * @param args the command line arguments
@@ -261,14 +261,14 @@ public class Register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField a;
-    private javax.swing.JPasswordField b;
-    private javax.swing.JPasswordField c;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel Background1;
+    private javax.swing.JPanel Background2;
+    private javax.swing.JButton ButtonRegis;
+    private javax.swing.JLabel LabelRegister;
+    private javax.swing.JTextField Nama;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JPasswordField VerPass;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

@@ -38,7 +38,7 @@ public class Respon_Konsul extends javax.swing.JFrame {
             while (rs.next()){
                 model.addRow(new Object[]{no++,rs.getString(1),rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7),rs.getString(8)});
                 
-                table.setModel(model);
+                TabelRecord.setModel(model);
             }
         
         }catch(SQLException e){
@@ -63,43 +63,43 @@ public class Respon_Konsul extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
+        Background1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        a = new javax.swing.JLabel();
-        b = new javax.swing.JLabel();
-        c = new javax.swing.JLabel();
-        d = new javax.swing.JLabel();
-        e = new javax.swing.JLabel();
+        TabelRecord = new javax.swing.JTable();
+        LabelRecords = new javax.swing.JLabel();
+        PanelForm = new javax.swing.JPanel();
+        Nama = new javax.swing.JLabel();
+        Topic = new javax.swing.JLabel();
+        Place = new javax.swing.JLabel();
+        Date = new javax.swing.JLabel();
+        Time = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        h = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        Status = new javax.swing.JTextField();
+        ButtonSubmitDetails = new javax.swing.JButton();
         jSeparator8 = new javax.swing.JSeparator();
-        jButton3 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        g = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        ButtonBack = new javax.swing.JButton();
+        PanelDiagnosis = new javax.swing.JPanel();
+        LabelFootNote = new javax.swing.JLabel();
+        IsiFootNote = new javax.swing.JTextField();
+        ButtonSubmitDiagnosis = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        b1 = new javax.swing.JTextArea();
+        IsiDiagnosis = new javax.swing.JTextArea();
         jSeparator6 = new javax.swing.JSeparator();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        LabelDetails = new javax.swing.JLabel();
+        LabelDiagnosis = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(77, 150, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        Background1.setBackground(new java.awt.Color(77, 150, 255));
+        Background1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        table.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        TabelRecord.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        TabelRecord.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -118,83 +118,83 @@ public class Respon_Konsul extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        table.addMouseListener(new java.awt.event.MouseAdapter() {
+        TabelRecord.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tableMouseClicked(evt);
+                TabelRecordMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(table);
+        jScrollPane1.setViewportView(TabelRecord);
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        jLabel1.setText("Consultee Records");
+        LabelRecords.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        LabelRecords.setText("Consultee Records");
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelForm.setBackground(new java.awt.Color(255, 255, 255));
+        PanelForm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        a.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        a.setForeground(new java.awt.Color(204, 204, 204));
-        a.setText("Username");
+        Nama.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Nama.setForeground(new java.awt.Color(204, 204, 204));
+        Nama.setText("Username");
 
-        b.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        b.setForeground(new java.awt.Color(204, 204, 204));
-        b.setText("Problem Topic");
+        Topic.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Topic.setForeground(new java.awt.Color(204, 204, 204));
+        Topic.setText("Problem Topic");
 
-        c.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        c.setForeground(new java.awt.Color(204, 204, 204));
-        c.setText("Place ");
+        Place.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Place.setForeground(new java.awt.Color(204, 204, 204));
+        Place.setText("Place ");
 
-        d.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        d.setForeground(new java.awt.Color(204, 204, 204));
-        d.setText("Date");
+        Date.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Date.setForeground(new java.awt.Color(204, 204, 204));
+        Date.setText("Date");
 
-        e.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        e.setForeground(new java.awt.Color(204, 204, 204));
-        e.setText("Time");
+        Time.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Time.setForeground(new java.awt.Color(204, 204, 204));
+        Time.setText("Time");
 
-        h.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        h.setForeground(new java.awt.Color(204, 204, 204));
-        h.setText("Status");
-        h.setBorder(null);
+        Status.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        Status.setForeground(new java.awt.Color(204, 204, 204));
+        Status.setText("Status");
+        Status.setBorder(null);
 
-        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jButton2.setText("Submit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSubmitDetails.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ButtonSubmitDetails.setText("Submit");
+        ButtonSubmitDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonSubmitDetailsActionPerformed(evt);
             }
         });
 
         jSeparator8.setBackground(new java.awt.Color(0, 0, 0));
 
-        jButton3.setText("Back");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBack.setText("Back");
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ButtonBackActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelFormLayout = new javax.swing.GroupLayout(PanelForm);
+        PanelForm.setLayout(PanelFormLayout);
+        PanelFormLayout.setHorizontalGroup(
+            PanelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelFormLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(PanelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelFormLayout.createSequentialGroup()
                         .addGap(0, 75, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ButtonSubmitDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
-                        .addComponent(jButton3))
-                    .addComponent(c, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(a, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(d, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(e, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(h, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))
+                        .addComponent(ButtonBack))
+                    .addComponent(Place, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Nama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelFormLayout.createSequentialGroup()
+                        .addGroup(PanelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(Date, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Time, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Status, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
-                    .addComponent(b, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Topic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator2)
                     .addComponent(jSeparator3)
                     .addComponent(jSeparator4)
@@ -202,168 +202,162 @@ public class Respon_Konsul extends javax.swing.JFrame {
                     .addComponent(jSeparator8))
                 .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        PanelFormLayout.setVerticalGroup(
+            PanelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelFormLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(a)
+                .addComponent(Nama)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
-                .addComponent(b)
+                .addComponent(Topic)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(c)
+                .addComponent(Place)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(d)
+                .addComponent(Date)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(e)
+                .addComponent(Time)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(h, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                .addGroup(PanelFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ButtonSubmitDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonBack))
                 .addGap(21, 21, 21))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        PanelDiagnosis.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel7.setText("Foot Note :");
+        LabelFootNote.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        LabelFootNote.setText("Foot Note :");
 
-        g.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
-        g.setText("Type your foot note here .....");
+        IsiFootNote.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
+        IsiFootNote.setText("Type your foot note here .....");
 
-        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSubmitDiagnosis.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ButtonSubmitDiagnosis.setText("Submit");
+        ButtonSubmitDiagnosis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonSubmitDiagnosisActionPerformed(evt);
             }
         });
 
-        b1.setColumns(20);
-        b1.setRows(5);
-        b1.setText("Type your diagnosis here ...");
-        b1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        b1.addMouseListener(new java.awt.event.MouseAdapter() {
+        IsiDiagnosis.setColumns(20);
+        IsiDiagnosis.setRows(5);
+        IsiDiagnosis.setText("Type your diagnosis here ...");
+        IsiDiagnosis.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        IsiDiagnosis.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                b1MouseClicked(evt);
+                IsiDiagnosisMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(b1);
+        jScrollPane2.setViewportView(IsiDiagnosis);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(g, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelDiagnosisLayout = new javax.swing.GroupLayout(PanelDiagnosis);
+        PanelDiagnosis.setLayout(PanelDiagnosisLayout);
+        PanelDiagnosisLayout.setHorizontalGroup(
+            PanelDiagnosisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelDiagnosisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelDiagnosisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelFootNote)
+                    .addComponent(IsiFootNote, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelDiagnosisLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonSubmitDiagnosis, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(118, 118, 118))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        PanelDiagnosisLayout.setVerticalGroup(
+            PanelDiagnosisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelDiagnosisLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
+                .addComponent(LabelFootNote)
                 .addGap(2, 2, 2)
-                .addComponent(g, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(IsiFootNote, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(ButtonSubmitDiagnosis)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jLabel8.setText("Details");
+        LabelDetails.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        LabelDetails.setText("Details");
 
-        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jLabel9.setText("Diagnosis");
+        LabelDiagnosis.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        LabelDiagnosis.setText("Diagnosis");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background1Layout = new javax.swing.GroupLayout(Background1);
+        Background1.setLayout(Background1Layout);
+        Background1Layout.setHorizontalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background1Layout.createSequentialGroup()
+                .addGroup(Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(PanelForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel8)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(LabelDetails)))
+                .addGroup(Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9)
+                        .addComponent(LabelDiagnosis)
                         .addGap(243, 243, 243))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(PanelDiagnosis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(Background1Layout.createSequentialGroup()
+                .addGroup(Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addGap(248, 248, 248)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(LabelRecords))
+                    .addGroup(Background1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        Background1Layout.setVerticalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(LabelRecords)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                .addGroup(Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelDetails)
+                    .addComponent(LabelDiagnosis))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PanelDiagnosis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelForm, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(95, 95, 95))
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
+        getContentPane().add(Background1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonSubmitDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubmitDetailsActionPerformed
         try{
-                String sql = "insert into janji set username ='"+ a.getText() +"' ,problem='"+ b.getText() +"' ,place='"+ c.getText() +"' ,date='"+ d.getText() +"' ,time='"+ e.getText() +"' ,status='"+ h.getText()+"' On Duplicate Key Update Username = '"+ a.getText() +"' ,problem='"+ b.getText() +"' ,place='"+ c.getText() +"' ,date='"+ d.getText() +"' ,time='"+ e.getText() +"' ,status='"+ h.getText() +"'";
+                String sql = "insert into janji set username ='"+ Nama.getText() +"' ,problem='"+ Topic.getText() +"' ,place='"+ Place.getText() +"' ,date='"+ Date.getText() +"' ,time='"+ Time.getText() +"' ,status='"+ Status.getText()+"' On Duplicate Key Update Username = '"+ Nama.getText() +"' ,problem='"+ Topic.getText() +"' ,place='"+ Place.getText() +"' ,date='"+ Date.getText() +"' ,time='"+ Time.getText() +"' ,status='"+ Status.getText() +"'";
                 java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
                 java.sql.PreparedStatement pst = conn.prepareStatement(sql);
                 pst.execute();
@@ -376,52 +370,52 @@ public class Respon_Konsul extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,ex);     
         }
         tampilkan_data();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ButtonSubmitDetailsActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
         new Menuconsultant().show();
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
-    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
-        int baris = table.rowAtPoint(evt.getPoint());
+    private void TabelRecordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelRecordMouseClicked
+        int baris = TabelRecord.rowAtPoint(evt.getPoint());
         
-        String user = table.getValueAt(baris, 1).toString();
-        a.setText(user);
-        a.setForeground(Color.black);
+        String user = TabelRecord.getValueAt(baris, 1).toString();
+        Nama.setText(user);
+        Nama.setForeground(Color.black);
         
-        String pb = table.getValueAt(baris, 2).toString();
-        b.setText(pb);
-        b.setForeground(Color.black);
+        String pb = TabelRecord.getValueAt(baris, 2).toString();
+        Topic.setText(pb);
+        Topic.setForeground(Color.black);
         
-        String pl = table.getValueAt(baris, 3).toString();
-        c.setText(pl);
-        c.setForeground(Color.black);
+        String pl = TabelRecord.getValueAt(baris, 3).toString();
+        Place.setText(pl);
+        Place.setForeground(Color.black);
         
-        String dt = table.getValueAt(baris, 4).toString();
-        d.setText(dt);
-        d.setForeground(Color.black);
+        String dt = TabelRecord.getValueAt(baris, 4).toString();
+        Date.setText(dt);
+        Date.setForeground(Color.black);
         
-        String tm = table.getValueAt(baris, 5).toString();
-        e.setText(tm);
-        e.setForeground(Color.black);
+        String tm = TabelRecord.getValueAt(baris, 5).toString();
+        Time.setText(tm);
+        Time.setForeground(Color.black);
         
-        String st =table.getValueAt(baris,6).toString();
-        h.setText(st);
-        h.setForeground(Color.black);
+        String st =TabelRecord.getValueAt(baris,6).toString();
+        Status.setText(st);
+        Status.setForeground(Color.black);
         
-        String dg = table.getValueAt(baris, 7).toString();
-        b1.setText(dg);
-        b1.setForeground(Color.black);
+        String dg = TabelRecord.getValueAt(baris, 7).toString();
+        IsiDiagnosis.setText(dg);
+        IsiDiagnosis.setForeground(Color.black);
         
-        String fn = table.getValueAt(baris, 8).toString();
-        g.setText(fn);
-        g.setForeground(Color.black);
-    }//GEN-LAST:event_tableMouseClicked
+        String fn = TabelRecord.getValueAt(baris, 8).toString();
+        IsiFootNote.setText(fn);
+        IsiFootNote.setForeground(Color.black);
+    }//GEN-LAST:event_TabelRecordMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonSubmitDiagnosisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubmitDiagnosisActionPerformed
         try{
-                String sql = "insert into janji set username ='"+ a.getText() +"' ,problem='"+ b.getText() +"' ,place='"+ c.getText() +"' ,date='"+ d.getText() +"' ,time='"+ e.getText() +"' ,status='"+ h.getText()+"' ,diagnosis='"+ b1.getText() +"' ,note='"+ g.getText() +"' On Duplicate Key Update Username = '"+ a.getText() +"' ,problem='"+ b.getText() +"' ,place='"+ c.getText() +"' ,date='"+ d.getText() +"' ,time='"+ e.getText() +"' ,status='"+ h.getText() +"' ,diagnosis='"+ b1.getText() +"' ,note='"+ g.getText() +"'";
+                String sql = "insert into janji set username ='"+ Nama.getText() +"' ,problem='"+ Topic.getText() +"' ,place='"+ Place.getText() +"' ,date='"+ Date.getText() +"' ,time='"+ Time.getText() +"' ,status='"+ Status.getText()+"' ,diagnosis='"+ IsiDiagnosis.getText() +"' ,note='"+ IsiFootNote.getText() +"' On Duplicate Key Update Username = '"+ Nama.getText() +"' ,problem='"+ Topic.getText() +"' ,place='"+ Place.getText() +"' ,date='"+ Date.getText() +"' ,time='"+ Time.getText() +"' ,status='"+ Status.getText() +"' ,diagnosis='"+ IsiDiagnosis.getText() +"' ,note='"+ IsiFootNote.getText() +"'";
                 java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
                 java.sql.PreparedStatement pst = conn.prepareStatement(sql);
                 pst.execute();
@@ -434,11 +428,11 @@ public class Respon_Konsul extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,ex);     
         }
         tampilkan_data();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonSubmitDiagnosisActionPerformed
 
-    private void b1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_b1MouseClicked
-        b.setText("");
-    }//GEN-LAST:event_b1MouseClicked
+    private void IsiDiagnosisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IsiDiagnosisMouseClicked
+        Topic.setText("");
+    }//GEN-LAST:event_IsiDiagnosisMouseClicked
 
     /**
      * @param args the command line arguments
@@ -477,24 +471,25 @@ public class Respon_Konsul extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel a;
-    private javax.swing.JLabel b;
-    private javax.swing.JTextArea b1;
-    private javax.swing.JLabel c;
-    private javax.swing.JLabel d;
-    private javax.swing.JLabel e;
-    private javax.swing.JTextField g;
-    private javax.swing.JTextField h;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel Background1;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonSubmitDetails;
+    private javax.swing.JButton ButtonSubmitDiagnosis;
+    private javax.swing.JLabel Date;
+    private javax.swing.JTextArea IsiDiagnosis;
+    private javax.swing.JTextField IsiFootNote;
+    private javax.swing.JLabel LabelDetails;
+    private javax.swing.JLabel LabelDiagnosis;
+    private javax.swing.JLabel LabelFootNote;
+    private javax.swing.JLabel LabelRecords;
+    private javax.swing.JLabel Nama;
+    private javax.swing.JPanel PanelDiagnosis;
+    private javax.swing.JPanel PanelForm;
+    private javax.swing.JLabel Place;
+    private javax.swing.JTextField Status;
+    private javax.swing.JTable TabelRecord;
+    private javax.swing.JLabel Time;
+    private javax.swing.JLabel Topic;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
@@ -504,6 +499,5 @@ public class Respon_Konsul extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

@@ -34,7 +34,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
             while (rs.next()){
                 model.addRow(new Object[]{no++,rs.getString(1),rs.getString(2),rs.getString(3)});
                 
-                table.setModel(model);
+                TabelAppointment.setModel(model);
             }
         
         }catch(SQLException e){
@@ -60,166 +60,166 @@ public class JanjiTemu_User extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        a = new javax.swing.JTextField();
-        b = new javax.swing.JTextField();
-        c = new javax.swing.JTextField();
-        d = new com.toedter.calendar.JDateChooser();
-        e = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        Background = new javax.swing.JPanel();
+        PanelFormAppointment = new javax.swing.JPanel();
+        InputNama = new javax.swing.JTextField();
+        InputTopic = new javax.swing.JTextField();
+        InputPlace = new javax.swing.JTextField();
+        PilihCalendar = new com.toedter.calendar.JDateChooser();
+        InputTime = new javax.swing.JTextField();
+        ButtonSubmit = new javax.swing.JButton();
+        LabelRequest = new javax.swing.JLabel();
+        ButtonBack = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
+        LabelDate = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
+        TabelAppointment = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(77, 150, 255));
+        Background.setBackground(new java.awt.Color(77, 150, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        PanelFormAppointment.setBackground(new java.awt.Color(255, 255, 255));
 
-        a.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        a.setText("Username");
-        a.setBorder(null);
-        a.addMouseListener(new java.awt.event.MouseAdapter() {
+        InputNama.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        InputNama.setText("Username");
+        InputNama.setBorder(null);
+        InputNama.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aMouseClicked(evt);
+                InputNamaMouseClicked(evt);
             }
         });
-        a.addActionListener(new java.awt.event.ActionListener() {
+        InputNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aActionPerformed(evt);
+                InputNamaActionPerformed(evt);
             }
         });
 
-        b.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        b.setText("Problem Topic");
-        b.setBorder(null);
-        b.addMouseListener(new java.awt.event.MouseAdapter() {
+        InputTopic.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        InputTopic.setText("Problem Topic");
+        InputTopic.setBorder(null);
+        InputTopic.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bMouseClicked(evt);
+                InputTopicMouseClicked(evt);
             }
         });
 
-        c.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        c.setText("Place");
-        c.setBorder(null);
-        c.addMouseListener(new java.awt.event.MouseAdapter() {
+        InputPlace.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        InputPlace.setText("Place");
+        InputPlace.setBorder(null);
+        InputPlace.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cMouseClicked(evt);
+                InputPlaceMouseClicked(evt);
             }
         });
 
-        e.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        e.setText("Time");
-        e.setBorder(null);
-        e.addMouseListener(new java.awt.event.MouseAdapter() {
+        InputTime.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        InputTime.setText("Time");
+        InputTime.setBorder(null);
+        InputTime.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                eMouseClicked(evt);
+                InputTimeMouseClicked(evt);
             }
         });
-        e.addActionListener(new java.awt.event.ActionListener() {
+        InputTime.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eActionPerformed(evt);
+                InputTimeActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Submit");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonSubmit.setText("Submit");
+        ButtonSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonSubmitActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel1.setText("Request Appointment");
+        LabelRequest.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        LabelRequest.setText("Request Appointment");
 
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonBack.setText("Back");
+        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonBackActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel2.setText("Date");
+        LabelDate.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        LabelDate.setText("Date");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelFormAppointmentLayout = new javax.swing.GroupLayout(PanelFormAppointment);
+        PanelFormAppointment.setLayout(PanelFormAppointmentLayout);
+        PanelFormAppointmentLayout.setHorizontalGroup(
+            PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
                 .addContainerGap(45, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
+                        .addComponent(ButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
+                        .addComponent(ButtonBack)
                         .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(e, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
+                        .addGroup(PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(InputTime, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InputPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InputTopic, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(InputNama, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
+                                .addComponent(LabelDate, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(PilihCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(70, 70, 70))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
+                        .addComponent(LabelRequest)
                         .addGap(41, 41, 41))))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        PanelFormAppointmentLayout.setVerticalGroup(
+            PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
                 .addContainerGap(44, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(LabelRequest)
                 .addGap(29, 29, 29)
-                .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(InputNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(InputTopic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(InputPlace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LabelDate)
+                    .addComponent(PilihCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(e, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(InputTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(ButtonBack)
                 .addGap(16, 16, 16))
         );
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        TabelAppointment.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -230,48 +230,48 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                 "Username", "Topic Problem", "Status"
             }
         ));
-        table.setGridColor(new java.awt.Color(204, 204, 204));
-        jScrollPane1.setViewportView(table);
+        TabelAppointment.setGridColor(new java.awt.Color(204, 204, 204));
+        jScrollPane1.setViewportView(TabelAppointment);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
+        Background.setLayout(BackgroundLayout);
+        BackgroundLayout.setHorizontalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackgroundLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelFormAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        BackgroundLayout.setVerticalGroup(
+            BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BackgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 461, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(PanelFormAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, -1));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
+    private void InputTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputTimeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_eActionPerformed
+    }//GEN-LAST:event_InputTimeActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String username = a.getText();
-        String topic = b.getText();
-        String place = c.getText();
-        String time = e.getText();
+    private void ButtonSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubmitActionPerformed
+        String username = InputNama.getText();
+        String topic = InputTopic.getText();
+        String place = InputPlace.getText();
+        String time = InputTime.getText();
         String status = "waiting";
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
-        String tanggal = String.valueOf(fm.format(d.getDate()));
+        String tanggal = String.valueOf(fm.format(PilihCalendar.getDate()));
         try{
             String sql = "insert into janji VALUES ('" + username +"','"+ topic +"','"+ place +"','"+ tanggal +"','"+ time +"','"+ status +"')";
             java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
@@ -283,32 +283,32 @@ public class JanjiTemu_User extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,ex);     
         }
         tampilkan_data();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonSubmitActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
         new TampilanUser().show();
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ButtonBackActionPerformed
 
-    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
+    private void InputNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputNamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_aActionPerformed
+    }//GEN-LAST:event_InputNamaActionPerformed
 
-    private void aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aMouseClicked
-        a.setText("");
-    }//GEN-LAST:event_aMouseClicked
+    private void InputNamaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputNamaMouseClicked
+        InputNama.setText("");
+    }//GEN-LAST:event_InputNamaMouseClicked
 
-    private void cMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cMouseClicked
-        c.setText("");
-    }//GEN-LAST:event_cMouseClicked
+    private void InputPlaceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputPlaceMouseClicked
+        InputPlace.setText("");
+    }//GEN-LAST:event_InputPlaceMouseClicked
 
-    private void eMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eMouseClicked
-        e.setText("");
-    }//GEN-LAST:event_eMouseClicked
+    private void InputTimeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputTimeMouseClicked
+        InputTime.setText("");
+    }//GEN-LAST:event_InputTimeMouseClicked
 
-    private void bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMouseClicked
-        b.setText("");
-    }//GEN-LAST:event_bMouseClicked
+    private void InputTopicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputTopicMouseClicked
+        InputTopic.setText("");
+    }//GEN-LAST:event_InputTopicMouseClicked
 
     /**
      * @param args the command line arguments
@@ -342,23 +342,23 @@ public class JanjiTemu_User extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField a;
-    private javax.swing.JTextField b;
-    private javax.swing.JTextField c;
-    private com.toedter.calendar.JDateChooser d;
-    private javax.swing.JTextField e;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel Background;
+    private javax.swing.JButton ButtonBack;
+    private javax.swing.JButton ButtonSubmit;
+    private javax.swing.JTextField InputNama;
+    private javax.swing.JTextField InputPlace;
+    private javax.swing.JTextField InputTime;
+    private javax.swing.JTextField InputTopic;
+    private javax.swing.JLabel LabelDate;
+    private javax.swing.JLabel LabelRequest;
+    private javax.swing.JPanel PanelFormAppointment;
+    private com.toedter.calendar.JDateChooser PilihCalendar;
+    private javax.swing.JTable TabelAppointment;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

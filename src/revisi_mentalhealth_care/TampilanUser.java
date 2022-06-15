@@ -16,7 +16,7 @@ public class TampilanUser extends javax.swing.JFrame {
      */
     public TampilanUser() {
         initComponents();
-        a.setText("Hello, " + Login.username);
+        LabelGreeting.setText("Hello, " + Login.username);
     }
 
     /**
@@ -28,147 +28,147 @@ public class TampilanUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        a = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Background2 = new javax.swing.JPanel();
+        Background1 = new javax.swing.JPanel();
+        LabelGreeting = new javax.swing.JLabel();
+        Background3 = new javax.swing.JPanel();
+        ButtonDiary = new javax.swing.JButton();
+        ButtonAppointment = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
+        Label2 = new javax.swing.JLabel();
+        ButtonRecords = new javax.swing.JButton();
+        ButtonLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        Background2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(77, 150, 255));
+        Background1.setBackground(new java.awt.Color(77, 150, 255));
 
-        a.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
-        a.setForeground(new java.awt.Color(255, 255, 255));
-        a.setText("Hello,");
+        LabelGreeting.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
+        LabelGreeting.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGreeting.setText("Hello,");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background1Layout = new javax.swing.GroupLayout(Background1);
+        Background1.setLayout(Background1Layout);
+        Background1Layout.setHorizontalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelGreeting, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        Background1Layout.setVerticalGroup(
+            Background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Background1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LabelGreeting, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel3.setBackground(new java.awt.Color(150, 204, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Background3.setBackground(new java.awt.Color(150, 204, 255));
+        Background3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(java.awt.Color.pink);
-        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("My Personal Diary");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonDiary.setBackground(java.awt.Color.pink);
+        ButtonDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        ButtonDiary.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonDiary.setText("My Personal Diary");
+        ButtonDiary.setBorder(null);
+        ButtonDiary.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonDiaryActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 255, 50));
+        Background3.add(ButtonDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 290, 50));
 
-        jButton3.setBackground(java.awt.Color.pink);
-        jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Make an Appointment");
-        jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAppointment.setBackground(java.awt.Color.pink);
+        ButtonAppointment.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        ButtonAppointment.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonAppointment.setText("Make an Appointment");
+        ButtonAppointment.setBorder(null);
+        ButtonAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ButtonAppointmentActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 290, 50));
+        Background3.add(ButtonAppointment, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 290, 50));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 220, -1));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
+        Background3.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, 220, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("How can we help?");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 44));
+        Label2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        Label2.setForeground(new java.awt.Color(255, 255, 255));
+        Label2.setText("How can we help?");
+        Background3.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 44));
 
-        jButton2.setBackground(java.awt.Color.pink);
-        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("My Records");
-        jButton2.setBorder(null);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonRecords.setBackground(java.awt.Color.pink);
+        ButtonRecords.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        ButtonRecords.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonRecords.setText("My Records");
+        ButtonRecords.setBorder(null);
+        ButtonRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonRecordsActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 260, 260, 50));
+        Background3.add(ButtonRecords, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 260, 290, 50));
 
-        jButton4.setBackground(java.awt.Color.pink);
-        jButton4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Log Out");
-        jButton4.setBorder(null);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ButtonLogOut.setBackground(java.awt.Color.pink);
+        ButtonLogOut.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        ButtonLogOut.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonLogOut.setText("Log Out");
+        ButtonLogOut.setBorder(null);
+        ButtonLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ButtonLogOutActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 140, 40));
+        Background3.add(ButtonLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, 140, 40));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background2Layout = new javax.swing.GroupLayout(Background2);
+        Background2.setLayout(Background2Layout);
+        Background2Layout.setHorizontalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Background1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(Background2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
+                .addComponent(Background3, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        Background2Layout.setVerticalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background2Layout.createSequentialGroup()
+                .addComponent(Background1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                .addComponent(Background3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
+        getContentPane().add(Background2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonDiaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDiaryActionPerformed
         new DiaryUser().show();
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonDiaryActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ButtonAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAppointmentActionPerformed
         new JanjiTemu_User().show();
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ButtonAppointmentActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRecordsActionPerformed
         new Record_User().show();
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ButtonRecordsActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void ButtonLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLogOutActionPerformed
         new Login().show();
         this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_ButtonLogOutActionPerformed
     
     /**
      * @param args the command line arguments
@@ -206,15 +206,15 @@ public class TampilanUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel a;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel Background1;
+    private javax.swing.JPanel Background2;
+    private javax.swing.JPanel Background3;
+    private javax.swing.JButton ButtonAppointment;
+    private javax.swing.JButton ButtonDiary;
+    private javax.swing.JButton ButtonLogOut;
+    private javax.swing.JButton ButtonRecords;
+    private javax.swing.JLabel Label2;
+    private javax.swing.JLabel LabelGreeting;
+    private javax.swing.JLabel logo;
     // End of variables declaration//GEN-END:variables
 }

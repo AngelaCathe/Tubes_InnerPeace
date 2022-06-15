@@ -30,14 +30,14 @@ public class MenuUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        LogoInnerPeace = new javax.swing.JLabel();
+        Logo = new javax.swing.JLabel();
         ButtonLogOut = new javax.swing.JButton();
         ButtonDiary = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Background2 = new javax.swing.JPanel();
+        Background3 = new javax.swing.JPanel();
         ButtonAppointment = new javax.swing.JButton();
-        ButtonAppointment1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        ButtonRecords = new javax.swing.JButton();
+        BackGround1 = new javax.swing.JPanel();
         LabelGreetingUser = new javax.swing.JLabel();
         LabelGreetingUser2 = new javax.swing.JLabel();
 
@@ -48,8 +48,8 @@ public class MenuUser extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(709, 483));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LogoInnerPeace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
-        getContentPane().add(LogoInnerPeace, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 260, 440));
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo innepeace1.png"))); // NOI18N
+        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 260, 440));
 
         ButtonLogOut.setBackground(java.awt.Color.pink);
         ButtonLogOut.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
@@ -95,9 +95,9 @@ public class MenuUser extends javax.swing.JFrame {
         });
         getContentPane().add(ButtonDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 340, 60));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        Background2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel3.setBackground(new java.awt.Color(150, 204, 255));
+        Background3.setBackground(new java.awt.Color(150, 204, 255));
 
         ButtonAppointment.setBackground(java.awt.Color.pink);
         ButtonAppointment.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -120,81 +120,81 @@ public class MenuUser extends javax.swing.JFrame {
             }
         });
 
-        ButtonAppointment1.setBackground(java.awt.Color.pink);
-        ButtonAppointment1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        ButtonAppointment1.setForeground(new java.awt.Color(255, 255, 255));
-        ButtonAppointment1.setText("My Records");
-        ButtonAppointment1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ButtonAppointment1.setBorderPainted(false);
-        ButtonAppointment1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ButtonAppointment1.addMouseListener(new java.awt.event.MouseAdapter() {
+        ButtonRecords.setBackground(java.awt.Color.pink);
+        ButtonRecords.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        ButtonRecords.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonRecords.setText("My Records");
+        ButtonRecords.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ButtonRecords.setBorderPainted(false);
+        ButtonRecords.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonRecords.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ButtonAppointment1MouseEntered(evt);
+                ButtonRecordsMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                ButtonAppointment1MouseExited(evt);
+                ButtonRecordsMouseExited(evt);
             }
         });
-        ButtonAppointment1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonRecords.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAppointment1ActionPerformed(evt);
+                ButtonRecordsActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background3Layout = new javax.swing.GroupLayout(Background3);
+        Background3.setLayout(Background3Layout);
+        Background3Layout.setHorizontalGroup(
+            Background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background3Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ButtonAppointment1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(Background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(318, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        Background3Layout.setVerticalGroup(
+            Background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background3Layout.createSequentialGroup()
                 .addGap(123, 123, 123)
                 .addComponent(ButtonAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(ButtonAppointment1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ButtonRecords, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(75, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout Background2Layout = new javax.swing.GroupLayout(Background2);
+        Background2.setLayout(Background2Layout);
+        Background2Layout.setHorizontalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Background3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        Background2Layout.setVerticalGroup(
+            Background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Background2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Background3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 710, 360));
+        getContentPane().add(Background2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 710, 360));
 
-        jPanel1.setBackground(new java.awt.Color(77, 150, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        BackGround1.setBackground(new java.awt.Color(77, 150, 255));
+        BackGround1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelGreetingUser.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
         LabelGreetingUser.setForeground(new java.awt.Color(255, 255, 255));
         LabelGreetingUser.setText("Hello there :)");
-        jPanel1.add(LabelGreetingUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 70));
+        BackGround1.add(LabelGreetingUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 400, 70));
 
         LabelGreetingUser2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 28)); // NOI18N
         LabelGreetingUser2.setForeground(new java.awt.Color(255, 255, 255));
         LabelGreetingUser2.setText("How can we help?");
-        jPanel1.add(LabelGreetingUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 400, 70));
+        BackGround1.add(LabelGreetingUser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 400, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 120));
+        getContentPane().add(BackGround1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 120));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -241,18 +241,18 @@ public class MenuUser extends javax.swing.JFrame {
         ButtonLogOut.setBackground(Color.pink);
     }//GEN-LAST:event_ButtonLogOutMouseExited
 
-    private void ButtonAppointment1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAppointment1MouseEntered
+    private void ButtonRecordsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRecordsMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonAppointment1MouseEntered
+    }//GEN-LAST:event_ButtonRecordsMouseEntered
 
-    private void ButtonAppointment1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonAppointment1MouseExited
+    private void ButtonRecordsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRecordsMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonAppointment1MouseExited
+    }//GEN-LAST:event_ButtonRecordsMouseExited
 
-    private void ButtonAppointment1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAppointment1ActionPerformed
+    private void ButtonRecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRecordsActionPerformed
         new RekamMedis_User().show();
         this.dispose();
-    }//GEN-LAST:event_ButtonAppointment1ActionPerformed
+    }//GEN-LAST:event_ButtonRecordsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -291,16 +291,16 @@ public class MenuUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BackGround1;
+    private javax.swing.JPanel Background2;
+    private javax.swing.JPanel Background3;
     private javax.swing.JButton ButtonAppointment;
-    private javax.swing.JButton ButtonAppointment1;
     private javax.swing.JButton ButtonDiary;
     private javax.swing.JButton ButtonLogOut;
+    private javax.swing.JButton ButtonRecords;
     private javax.swing.JLabel LabelGreetingUser;
     private javax.swing.JLabel LabelGreetingUser2;
-    private javax.swing.JLabel LogoInnerPeace;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel Logo;
     // End of variables declaration//GEN-END:variables
     
 }
