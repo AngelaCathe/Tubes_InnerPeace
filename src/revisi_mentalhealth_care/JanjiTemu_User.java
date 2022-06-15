@@ -26,7 +26,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         
         try{
             int no = 1;
-            String sql = "SELECT username, topic, status FROM janji";
+            String sql = "SELECT username, problem, status FROM janji";
             java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
             java.sql.PreparedStatement pst = conn.prepareStatement(sql);
             java.sql.ResultSet rs = pst.executeQuery();
@@ -48,6 +48,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
     public JanjiTemu_User() {
         initComponents();
         tampilkan_data();
+    
     }
 
     /**
@@ -64,7 +65,6 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         a = new javax.swing.JTextField();
         b = new javax.swing.JTextField();
         c = new javax.swing.JTextField();
-        d = new com.toedter.calendar.JDateChooser();
         e = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -74,6 +74,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
+        d = new com.toedter.calendar.JDateChooser();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
@@ -88,18 +89,43 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         a.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         a.setText("Username");
         a.setBorder(null);
+        a.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aMouseClicked(evt);
+            }
+        });
+        a.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aActionPerformed(evt);
+            }
+        });
 
         b.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         b.setText("Problem Topic");
         b.setBorder(null);
+        b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bMouseClicked(evt);
+            }
+        });
 
         c.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         c.setText("Place");
         c.setBorder(null);
+        c.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cMouseClicked(evt);
+            }
+        });
 
         e.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         e.setText("Time");
         e.setBorder(null);
+        e.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                eMouseClicked(evt);
+            }
+        });
         e.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eActionPerformed(evt);
@@ -114,7 +140,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel1.setText("Request Appoinment");
+        jLabel1.setText("Request Appointment");
 
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -122,6 +148,8 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+
+        d.setBackground(new java.awt.Color(0, 0, 0));
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         jLabel2.setText("Date");
@@ -131,11 +159,8 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(113, 113, 113))
@@ -143,7 +168,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                         .addComponent(jButton2)
                         .addGap(22, 22, 22))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(e, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(b, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,17 +179,20 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                             .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(70, 70, 70))))
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(70, 70, 70))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(41, 41, 41))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
+                .addGap(29, 29, 29)
                 .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,10 +204,10 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                 .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(d, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
@@ -214,9 +242,9 @@ public class JanjiTemu_User extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(17, 17, 17))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -228,7 +256,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -246,28 +274,43 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
         String tanggal = String.valueOf(fm.format(d.getDate()));
-        
-        if("".equals(username) || "".equals(topic) || "".equals(place) || "".equals(time) || "".equals(tanggal)){
-            JOptionPane.showMessageDialog(null,"Data Tidak Tersimpan");
-        }else{
-           try{
-                String sql = "insert into janji VALUES ('" + username +"','"+ topic +"','"+ place +"','"+ tanggal +"','"+ time +"','"+ status +"')";
-                java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
-                java.sql.PreparedStatement pst = conn.prepareStatement(sql);
-                pst.execute();
+        try{
+            String sql = "insert into janji VALUES ('" + username +"','"+ topic +"','"+ place +"','"+ tanggal +"','"+ time +"','"+ status +"')";
+            java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+            pst.execute();
 
-                JOptionPane.showMessageDialog(null,"Data Tersimpan");
-            }catch (SQLException ex) {
-                JOptionPane.showMessageDialog(null,ex);     
-            }
-           tampilkan_data();
+            JOptionPane.showMessageDialog(null,"Data Tersimpan");
+        }catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,ex);     
         }
+        tampilkan_data();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new MenuUser().show();
+        new TampilanUser().show();
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_aActionPerformed
+
+    private void aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aMouseClicked
+        a.setText("");
+    }//GEN-LAST:event_aMouseClicked
+
+    private void cMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cMouseClicked
+        c.setText("");
+    }//GEN-LAST:event_cMouseClicked
+
+    private void eMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_eMouseClicked
+        e.setText("");
+    }//GEN-LAST:event_eMouseClicked
+
+    private void bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMouseClicked
+        b.setText("");
+    }//GEN-LAST:event_bMouseClicked
 
     /**
      * @param args the command line arguments

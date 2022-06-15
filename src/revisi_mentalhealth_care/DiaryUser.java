@@ -1,22 +1,52 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package revisi_mentalhealth_care;
 
 import java.awt.Color;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Aspire 5
+ * @author HP
  */
 public class DiaryUser extends javax.swing.JFrame {
-
+    public void tampilkan_data(){
+        DefaultTableModel model = new DefaultTableModel();
+        
+        model.addColumn("No");
+        model.addColumn("Date");
+        model.addColumn("Title");
+        model.addColumn("About");
+                
+        try{
+            int no = 1;
+            String sql = "SELECT date, title, diary FROM catatan";
+            java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+            java.sql.ResultSet rs = pst.executeQuery();
+            
+            while (rs.next()){
+                model.addRow(new Object[]{no++,rs.getString(1),rs.getString(2), rs.getString(3)});
+                
+                table.setModel(model);
+            }
+        
+        }catch(SQLException e){
+            System.out.println("ERROR :" +e.getMessage());
+        }
+    }
     /**
-     * Creates new form MenuUser
+     * Creates new form Catatan_Kecil
      */
     public DiaryUser() {
         initComponents();
+        tampilkan_data();
     }
 
     /**
@@ -28,339 +58,209 @@ public class DiaryUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        RadioButtonDiaryPrivacy = new javax.swing.ButtonGroup();
-        LabelGreetingDiary = new javax.swing.JLabel();
-        jBackground = new javax.swing.JPanel();
-        LabelGreetingDiary2 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        TabelDiary = new javax.swing.JTable();
-        ButtonBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        AreaTulisDiary = new javax.swing.JTextArea();
-        LabelGreetingDiary3 = new javax.swing.JLabel();
-        ButtonSave = new javax.swing.JButton();
+        table = new javax.swing.JTable();
+        a = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        b = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        date = new com.toedter.calendar.JDateChooser();
+        c = new com.toedter.calendar.JDateChooser();
         jLabel3 = new javax.swing.JLabel();
-        aboutText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("InnerPeace");
-        setName("MenuUser"); // NOI18N
-        setResizable(false);
-        setSize(new java.awt.Dimension(709, 483));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelGreetingDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        LabelGreetingDiary.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary.setText("My Personal Diary");
-        getContentPane().add(LabelGreetingDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.setBackground(new java.awt.Color(77, 150, 255));
 
-        jBackground.setBackground(new java.awt.Color(77, 150, 255));
-
-        LabelGreetingDiary2.setBackground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
-        LabelGreetingDiary2.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setText("A Sanctuary, vent to your heart's content.");
-
-        javax.swing.GroupLayout jBackgroundLayout = new javax.swing.GroupLayout(jBackground);
-        jBackground.setLayout(jBackgroundLayout);
-        jBackgroundLayout.setHorizontalGroup(
-            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jBackgroundLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(LabelGreetingDiary2, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(240, Short.MAX_VALUE))
-        );
-        jBackgroundLayout.setVerticalGroup(
-            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBackgroundLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(LabelGreetingDiary2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        getContentPane().add(jBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 80));
-
-        jPanel1.setBackground(new java.awt.Color(150, 204, 255));
-
-        TabelDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        TabelDiary.setModel(new javax.swing.table.DefaultTableModel(
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Date", "About..."
+                "Title 1", "Title 2", "Title 3"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+        ));
+        table.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(TabelDiary);
-        if (TabelDiary.getColumnModel().getColumnCount() > 0) {
-            TabelDiary.getColumnModel().getColumn(0).setPreferredWidth(60);
-            TabelDiary.getColumnModel().getColumn(0).setMaxWidth(60);
-        }
+        jScrollPane1.setViewportView(table);
 
-        ButtonBack.setBackground(java.awt.Color.pink);
-        ButtonBack.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        ButtonBack.setForeground(new java.awt.Color(0, 102, 153));
-        ButtonBack.setText("Back to Main Menu");
-        ButtonBack.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ButtonBack.setBorderPainted(false);
-        ButtonBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ButtonBack.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ButtonBackMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ButtonBackMouseExited(evt);
+        a.setText("Title");
+        a.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        a.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aMouseClicked(evt);
             }
         });
-        ButtonBack.addActionListener(new java.awt.event.ActionListener() {
+        a.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonBackActionPerformed(evt);
+                aActionPerformed(evt);
             }
         });
 
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-
-        AreaTulisDiary.setColumns(20);
-        AreaTulisDiary.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        AreaTulisDiary.setRows(5);
-        AreaTulisDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        AreaTulisDiary.setMargin(new java.awt.Insets(5, 5, 5, 5));
-        jScrollPane1.setViewportView(AreaTulisDiary);
-
-        LabelGreetingDiary3.setBackground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        LabelGreetingDiary3.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary3.setText("Diary Content");
-
-        ButtonSave.setBackground(java.awt.Color.pink);
-        ButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        ButtonSave.setForeground(new java.awt.Color(0, 102, 153));
-        ButtonSave.setText("Save");
-        ButtonSave.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ButtonSave.setBorderPainted(false);
-        ButtonSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ButtonSave.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ButtonSaveMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ButtonSaveMouseExited(evt);
+        b.setColumns(20);
+        b.setRows(5);
+        b.setText("Text");
+        b.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        b.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bMouseClicked(evt);
             }
         });
-        ButtonSave.addActionListener(new java.awt.event.ActionListener() {
+        jScrollPane2.setViewportView(b);
+
+        jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jButton1.setText("DONE");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonSaveActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Date");
+        jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jButton2.setText("Back To Main Menu");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("A Sanctuary, vent to your heart's content.");
+
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        jLabel2.setText("My Personal Diary");
+
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("About");
-
-        aboutText.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        aboutText.setBorder(null);
+        jLabel3.setText("Diary Content");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelGreetingDiary3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(ButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(aboutText))))))
-                .addContainerGap())
+                                        .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(c, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                                .addComponent(jButton2))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1))))
+                .addGap(42, 42, 42))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(aboutText, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(ButtonSave)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
-                        .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(LabelGreetingDiary3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1)
-                        .addGap(28, 28, 28)))
-                .addContainerGap())
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(a, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(c, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton1)))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 690, 360));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
-        new MenuUser().show();
-        this.dispose();
-    }//GEN-LAST:event_ButtonBackActionPerformed
-
-    private void ButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSaveActionPerformed
+    private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonSaveActionPerformed
+    }//GEN-LAST:event_aActionPerformed
 
-    private void ButtonSaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSaveMouseEntered
-        ButtonSave.setBackground(Color.lightGray);
-    }//GEN-LAST:event_ButtonSaveMouseEntered
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String title = a.getText();
+        String diary = b.getText();
+        String tampilan = "yyyy-MM-dd";
+        SimpleDateFormat fm = new SimpleDateFormat(tampilan);
+        String date = String.valueOf(fm.format(c.getDate()));
+        try{
+                String sql = "insert into catatan VALUES ('" + date +"','"+ title +"','"+ diary +"')";
+                java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
+                java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+                pst.execute();
 
-    private void ButtonSaveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSaveMouseExited
-        ButtonSave.setBackground(Color.pink);
-    }//GEN-LAST:event_ButtonSaveMouseExited
+                JOptionPane.showMessageDialog(null,"Data Tersimpan");
+            }catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null,ex);
+            }
+        tampilkan_data();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ButtonBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBackMouseEntered
-        ButtonBack.setBackground(Color.lightGray);
-    }//GEN-LAST:event_ButtonBackMouseEntered
+    private void tableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableMouseClicked
+        int baris = table.rowAtPoint(evt.getPoint());
+        
+        String ttl = table.getValueAt(baris, 2).toString();
+        a.setText(ttl);
+        a.setForeground(Color.black);
+        
+        String dry = table.getValueAt(baris, 3).toString();
+        b.setText(dry);
+        b.setForeground(Color.black);
+    }//GEN-LAST:event_tableMouseClicked
 
-    private void ButtonBackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBackMouseExited
-        ButtonBack.setBackground(Color.pink);
-    }//GEN-LAST:event_ButtonBackMouseExited
+    private void aMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aMouseClicked
+        a.setText("");
+    }//GEN-LAST:event_aMouseClicked
+
+    private void bMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bMouseClicked
+        b.setText("");
+    }//GEN-LAST:event_bMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new TampilanUser().show();
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -389,8 +289,6 @@ public class DiaryUser extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -401,21 +299,18 @@ public class DiaryUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea AreaTulisDiary;
-    private javax.swing.JButton ButtonBack;
-    private javax.swing.JButton ButtonSave;
-    private javax.swing.JLabel LabelGreetingDiary;
-    private javax.swing.JLabel LabelGreetingDiary2;
-    private javax.swing.JLabel LabelGreetingDiary3;
-    private javax.swing.ButtonGroup RadioButtonDiaryPrivacy;
-    private javax.swing.JTable TabelDiary;
-    private javax.swing.JTextField aboutText;
-    private com.toedter.calendar.JDateChooser date;
-    private javax.swing.JPanel jBackground;
+    private javax.swing.JTextField a;
+    private javax.swing.JTextArea b;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private com.toedter.calendar.JDateChooser c;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }
