@@ -29,15 +29,21 @@ public class DiaryUser extends javax.swing.JFrame {
     private void initComponents() {
 
         RadioButtonDiaryPrivacy = new javax.swing.ButtonGroup();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        AreaTulisDiary = new javax.swing.JTextArea();
+        LabelGreetingDiary = new javax.swing.JLabel();
+        jBackground = new javax.swing.JPanel();
+        LabelGreetingDiary2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TabelDiary = new javax.swing.JTable();
-        ButtonFinishDiary = new javax.swing.JButton();
         ButtonBack = new javax.swing.JButton();
-        LabelGreetingDiary = new javax.swing.JLabel();
-        LabelGreetingDiary2 = new javax.swing.JLabel();
-        jBackground = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        AreaTulisDiary = new javax.swing.JTextArea();
+        LabelGreetingDiary3 = new javax.swing.JLabel();
+        ButtonSave = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        date = new com.toedter.calendar.JDateChooser();
+        jLabel3 = new javax.swing.JLabel();
+        aboutText = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("InnerPeace");
@@ -46,127 +52,149 @@ public class DiaryUser extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(709, 483));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LabelGreetingDiary.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary.setText("My Personal Diary");
+        getContentPane().add(LabelGreetingDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        AreaTulisDiary.setColumns(20);
-        AreaTulisDiary.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
-        AreaTulisDiary.setRows(5);
-        AreaTulisDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        AreaTulisDiary.setMargin(new java.awt.Insets(5, 5, 5, 5));
-        jScrollPane1.setViewportView(AreaTulisDiary);
+        jBackground.setBackground(new java.awt.Color(77, 150, 255));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 410, 220));
+        LabelGreetingDiary2.setBackground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        LabelGreetingDiary2.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary2.setText("A Sanctuary, vent to your heart's content.");
+
+        javax.swing.GroupLayout jBackgroundLayout = new javax.swing.GroupLayout(jBackground);
+        jBackground.setLayout(jBackgroundLayout);
+        jBackgroundLayout.setHorizontalGroup(
+            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jBackgroundLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(LabelGreetingDiary2, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(240, Short.MAX_VALUE))
+        );
+        jBackgroundLayout.setVerticalGroup(
+            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBackgroundLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(LabelGreetingDiary2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(jBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 80));
+
+        jPanel1.setBackground(new java.awt.Color(150, 204, 255));
 
         TabelDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         TabelDiary.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "No.", "Date", "About..."
+                "Date", "About..."
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -175,35 +203,9 @@ public class DiaryUser extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(TabelDiary);
         if (TabelDiary.getColumnModel().getColumnCount() > 0) {
-            TabelDiary.getColumnModel().getColumn(0).setPreferredWidth(30);
-            TabelDiary.getColumnModel().getColumn(0).setMaxWidth(30);
-            TabelDiary.getColumnModel().getColumn(1).setPreferredWidth(60);
-            TabelDiary.getColumnModel().getColumn(1).setMaxWidth(60);
+            TabelDiary.getColumnModel().getColumn(0).setPreferredWidth(60);
+            TabelDiary.getColumnModel().getColumn(0).setMaxWidth(60);
         }
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 340, 90));
-
-        ButtonFinishDiary.setBackground(java.awt.Color.pink);
-        ButtonFinishDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        ButtonFinishDiary.setForeground(new java.awt.Color(0, 102, 153));
-        ButtonFinishDiary.setText("Done");
-        ButtonFinishDiary.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ButtonFinishDiary.setBorderPainted(false);
-        ButtonFinishDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ButtonFinishDiary.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ButtonFinishDiaryMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ButtonFinishDiaryMouseExited(evt);
-            }
-        });
-        ButtonFinishDiary.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonFinishDiaryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ButtonFinishDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, -1));
 
         ButtonBack.setBackground(java.awt.Color.pink);
         ButtonBack.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -225,52 +227,132 @@ public class DiaryUser extends javax.swing.JFrame {
                 ButtonBackActionPerformed(evt);
             }
         });
-        getContentPane().add(ButtonBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 160, 40));
 
-        LabelGreetingDiary.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        LabelGreetingDiary.setForeground(new java.awt.Color(0, 102, 153));
-        LabelGreetingDiary.setText("My Personal Diary");
-        getContentPane().add(LabelGreetingDiary, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        LabelGreetingDiary2.setBackground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
-        LabelGreetingDiary2.setForeground(new java.awt.Color(255, 255, 255));
-        LabelGreetingDiary2.setText("A Sanctuary, vent to your heart's content.");
-        getContentPane().add(LabelGreetingDiary2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 420, 30));
+        AreaTulisDiary.setColumns(20);
+        AreaTulisDiary.setFont(new java.awt.Font("Candara", 0, 14)); // NOI18N
+        AreaTulisDiary.setRows(5);
+        AreaTulisDiary.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        AreaTulisDiary.setMargin(new java.awt.Insets(5, 5, 5, 5));
+        jScrollPane1.setViewportView(AreaTulisDiary);
 
-        jBackground.setBackground(new java.awt.Color(77, 150, 255));
+        LabelGreetingDiary3.setBackground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        LabelGreetingDiary3.setForeground(new java.awt.Color(255, 255, 255));
+        LabelGreetingDiary3.setText("Diary Content");
 
-        javax.swing.GroupLayout jBackgroundLayout = new javax.swing.GroupLayout(jBackground);
-        jBackground.setLayout(jBackgroundLayout);
-        jBackgroundLayout.setHorizontalGroup(
-            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 710, Short.MAX_VALUE)
+        ButtonSave.setBackground(java.awt.Color.pink);
+        ButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        ButtonSave.setForeground(new java.awt.Color(0, 102, 153));
+        ButtonSave.setText("Save");
+        ButtonSave.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ButtonSave.setBorderPainted(false);
+        ButtonSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ButtonSave.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ButtonSaveMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ButtonSaveMouseExited(evt);
+            }
+        });
+        ButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonSaveActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Date");
+
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("About");
+
+        aboutText.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        aboutText.setBorder(null);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelGreetingDiary3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(date, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(ButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(aboutText))))))
+                .addContainerGap())
         );
-        jBackgroundLayout.setVerticalGroup(
-            jBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 480, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(aboutText, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(ButtonSave)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                        .addComponent(ButtonBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(LabelGreetingDiary3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1)
+                        .addGap(28, 28, 28)))
+                .addContainerGap())
         );
 
-        getContentPane().add(jBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 480));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 690, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
-        // TODO add your handling code here:
+        new MenuUser().show();
+        this.dispose();
     }//GEN-LAST:event_ButtonBackActionPerformed
 
-    private void ButtonFinishDiaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonFinishDiaryActionPerformed
+    private void ButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSaveActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonFinishDiaryActionPerformed
+    }//GEN-LAST:event_ButtonSaveActionPerformed
 
-    private void ButtonFinishDiaryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonFinishDiaryMouseEntered
-        ButtonFinishDiary.setBackground(Color.lightGray);
-    }//GEN-LAST:event_ButtonFinishDiaryMouseEntered
+    private void ButtonSaveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSaveMouseEntered
+        ButtonSave.setBackground(Color.lightGray);
+    }//GEN-LAST:event_ButtonSaveMouseEntered
 
-    private void ButtonFinishDiaryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonFinishDiaryMouseExited
-        ButtonFinishDiary.setBackground(Color.pink);
-    }//GEN-LAST:event_ButtonFinishDiaryMouseExited
+    private void ButtonSaveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonSaveMouseExited
+        ButtonSave.setBackground(Color.pink);
+    }//GEN-LAST:event_ButtonSaveMouseExited
 
     private void ButtonBackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonBackMouseEntered
         ButtonBack.setBackground(Color.lightGray);
@@ -321,12 +403,18 @@ public class DiaryUser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea AreaTulisDiary;
     private javax.swing.JButton ButtonBack;
-    private javax.swing.JButton ButtonFinishDiary;
+    private javax.swing.JButton ButtonSave;
     private javax.swing.JLabel LabelGreetingDiary;
     private javax.swing.JLabel LabelGreetingDiary2;
+    private javax.swing.JLabel LabelGreetingDiary3;
     private javax.swing.ButtonGroup RadioButtonDiaryPrivacy;
     private javax.swing.JTable TabelDiary;
+    private javax.swing.JTextField aboutText;
+    private com.toedter.calendar.JDateChooser date;
     private javax.swing.JPanel jBackground;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

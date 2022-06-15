@@ -5,6 +5,7 @@
 package revisi_mentalhealth_care;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Aspire 5
@@ -168,15 +169,21 @@ public class MenuKonsultan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonRekamMedisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonRekamMedisActionPerformed
-        // TODO add your handling code here:
+        new RekamMedis_Konsul().show();
+        this.dispose();
     }//GEN-LAST:event_ButtonRekamMedisActionPerformed
 
     private void ButtonLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonLogOutActionPerformed
-        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this, "Log Out?", "", JOptionPane.YES_NO_OPTION);
+        if(response==JOptionPane.YES_OPTION){
+            new Login().show();
+            this.dispose();
+        }
     }//GEN-LAST:event_ButtonLogOutActionPerformed
 
     private void ButtonAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAppointmentActionPerformed
-        // TODO add your handling code here:
+        new Tampilan_Konsul().show();
+        this.dispose();
     }//GEN-LAST:event_ButtonAppointmentActionPerformed
 
     private void ButtonRekamMedisMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonRekamMedisMouseEntered
