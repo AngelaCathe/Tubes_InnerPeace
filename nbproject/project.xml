@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>revisi_MentalHealth_Care</name>
+            <name>MentalHealth_Care</name>
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

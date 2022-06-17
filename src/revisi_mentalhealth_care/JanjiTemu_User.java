@@ -65,7 +65,6 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         InputNama = new javax.swing.JTextField();
         InputTopic = new javax.swing.JTextField();
         InputPlace = new javax.swing.JTextField();
-        PilihCalendar = new com.toedter.calendar.JDateChooser();
         InputTime = new javax.swing.JTextField();
         ButtonSubmit = new javax.swing.JButton();
         LabelRequest = new javax.swing.JLabel();
@@ -157,7 +156,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         PanelFormAppointmentLayout.setHorizontalGroup(
             PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
-                .addContainerGap(45, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
                         .addComponent(ButtonSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -178,8 +177,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                             .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
                                 .addComponent(LabelDate, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PilihCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(146, 146, 146)))
                         .addGap(70, 70, 70))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFormAppointmentLayout.createSequentialGroup()
                         .addComponent(LabelRequest)
@@ -188,7 +186,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         PanelFormAppointmentLayout.setVerticalGroup(
             PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelFormAppointmentLayout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addComponent(LabelRequest)
                 .addGap(29, 29, 29)
                 .addComponent(InputNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,9 +201,7 @@ public class JanjiTemu_User extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
-                .addGroup(PanelFormAppointmentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LabelDate)
-                    .addComponent(PilihCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(LabelDate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
@@ -352,7 +348,6 @@ public class JanjiTemu_User extends javax.swing.JFrame {
     private javax.swing.JLabel LabelDate;
     private javax.swing.JLabel LabelRequest;
     private javax.swing.JPanel PanelFormAppointment;
-    private com.toedter.calendar.JDateChooser PilihCalendar;
     private javax.swing.JTable TabelAppointment;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
