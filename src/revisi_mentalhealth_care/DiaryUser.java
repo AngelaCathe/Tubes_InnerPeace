@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import Objects.User;
 
 /**
  *
@@ -219,13 +220,14 @@ public class DiaryUser extends javax.swing.JFrame {
     }//GEN-LAST:event_InputTitleActionPerformed
 
     private void ButtonDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDoneActionPerformed
-        String title = InputTitle.getText();
-        String diary = IsiDiary.getText();
+        User user = new User(Login.username, Login.pass);
+        user.Titlediary = InputTitle.getText();
+        user.Isidiary = IsiDiary.getText();
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
-        String date = String.valueOf(fm.format(Date.getDate()));
+        user.datediary = String.valueOf(fm.format(Date.getDate()));
         try{
-                String sql = "insert into catatan VALUES ('" + date +"','"+ title +"','"+ diary +"')";
+                String sql = "insert into catatan VALUES ('" + user.datediary +"','"+ user.Titlediary +"','"+ user.Isidiary +"')";
                 java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
                 java.sql.PreparedStatement pst = conn.prepareStatement(sql);
                 pst.execute();

@@ -9,11 +9,19 @@ package Objects;
  * @author Aspire 5
  */
 public class Consultant extends Person {
+    public String statusAppoint;
+    public String diagnosis;
+    public String footnote;
     
-    public Consultant(String name, String password) {
-        super(name, password);
+    public Consultant() {
+        super("konsul", "konsul");
     }
     
-    public void setAppointment() {
+    public void setRecord(String status, String diagnos,String footnt) {
+        this.statusAppoint = status;
+        this.diagnosis = diagnos;
+        this.footnote = footnt;
     }
+    
+    
 }

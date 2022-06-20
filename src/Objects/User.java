@@ -8,10 +8,11 @@ package Objects;
  *
  * @author Aspire 5
  */
-public class User extends Person { 
-    protected String Titlediary;
-    protected String Isidiary;
-    protected String datediary;
+public class User extends Person {
+    //atribut diary
+    public String Titlediary;
+    public String Isidiary;
+    public String datediary;
 
     public User(String name, String password) {
         super(name, password);
