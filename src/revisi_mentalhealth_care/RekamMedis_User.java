@@ -367,7 +367,7 @@ public class RekamMedis_User extends javax.swing.JFrame {
     }//GEN-LAST:event_tableMouseClicked
 
     private void ButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackActionPerformed
-        new MenuKonsultan().show();
+        new TampilanUser().show();
         this.dispose();
     }//GEN-LAST:event_ButtonBackActionPerformed
 
