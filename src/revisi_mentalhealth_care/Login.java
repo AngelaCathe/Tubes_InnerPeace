@@ -18,6 +18,7 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
     
     public static String username;
+    public static String pass;
 
     /**
      * Creates new form koneksi
@@ -222,6 +223,7 @@ public class Login extends javax.swing.JFrame {
                 else{
                     JOptionPane.showMessageDialog(null,"Login Berhasil");
                     username = nama.getText();
+                    pass = password.getText();
                     new TampilanUser().show();
                     this.dispose();
                 }

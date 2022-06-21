@@ -5,6 +5,7 @@
  */
 package revisi_mentalhealth_care;
 
+import Objects.MedRecord;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -268,8 +269,9 @@ public class JanjiTemu_User extends javax.swing.JFrame {
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
         String tanggal = String.valueOf(fm.format(PilihCalendar.getDate()));
+        MedRecord mrc = new MedRecord(topic,place,tanggal,time);
         try{
-            String sql = "insert into janji VALUES ('" + username +"','"+ topic +"','"+ place +"','"+ tanggal +"','"+ time +"','"+ status +"')";
+            String sql = "insert into janji VALUES ('" + username +"','"+ mrc.topic +"','"+ mrc.place +"','"+ mrc.date +"','"+ mrc.time +"','"+ status +"')";
             java.sql.Connection conn = (java.sql.Connection)koneksi_database.koneksi.configDB();
             java.sql.PreparedStatement pst = conn.prepareStatement(sql);
             pst.execute();

@@ -5,6 +5,7 @@
  */
 package revisi_mentalhealth_care;
 
+import Objects.Consultant;
 import java.awt.Color;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -378,6 +379,7 @@ public class Respon_Konsul extends javax.swing.JFrame {
     }//GEN-LAST:event_ButtonBackActionPerformed
 
     private void TabelRecordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelRecordMouseClicked
+        Consultant consul = new Consultant();
         int baris = TabelRecord.rowAtPoint(evt.getPoint());
         
         String user = TabelRecord.getValueAt(baris, 1).toString();
@@ -403,14 +405,17 @@ public class Respon_Konsul extends javax.swing.JFrame {
         String st =TabelRecord.getValueAt(baris,6).toString();
         Status.setText(st);
         Status.setForeground(Color.black);
+        consul.statusAppoint = Status.getText();
         
         String dg = TabelRecord.getValueAt(baris, 7).toString();
         IsiDiagnosis.setText(dg);
         IsiDiagnosis.setForeground(Color.black);
+        consul.diagnosis = IsiDiagnosis.getText();
         
         String fn = TabelRecord.getValueAt(baris, 8).toString();
         IsiFootNote.setText(fn);
         IsiFootNote.setForeground(Color.black);
+        consul.footnote = IsiFootNote.getText();
     }//GEN-LAST:event_TabelRecordMouseClicked
 
     private void ButtonSubmitDiagnosisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSubmitDiagnosisActionPerformed
